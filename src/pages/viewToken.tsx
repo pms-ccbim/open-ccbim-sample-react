@@ -39,8 +39,8 @@ export default function Page() {
       let modelAppConfig = new PMS.CCBIM.WebAppModelConfig();
 
       modelAppConfig.dom = document.getElementById('bimView');
-      modelAppConfig.urlIp = 'http://open-test.ccbim.com';
-      modelAppConfig.fileId = fileId;
+      // modelAppConfig.urlIp = 'http://open-test.ccbim.com'; // urlIp 默认https://open.ccbim.com 可根据需求配置成其它地址
+      modelAppConfig.viewToken = viewToken;
 
       // @ts-ignore
       modelApp = new PMS.CCBIM.WebAppModel(modelAppConfig);
