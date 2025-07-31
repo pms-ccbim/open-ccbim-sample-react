@@ -224,7 +224,8 @@ class UploadFile {
           // 通过OSS方式上传
           if (!fileKey) {
             // 创建一个fileKey
-            resultData.fileKey = fileItem.fileId + fileItem.format;
+            resultData.fileKey =
+              fileItem.filePolicyData.fileId + fileItem.format;
 
             if (fileItem.size > 120 * 100) {
               // 大文件上传
